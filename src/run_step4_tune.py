@@ -11,10 +11,10 @@ import timeit
 import yaml
 import random
 import argparse
-from tensorflow.keras.optimizers import Adam
+from keras.optimizers import Adam
 from go_model.tune_model import tune_model
-from statistics.write_txt import write_txt
-from statistics.get_stats_plots import get_stats_plots
+from statistics_local.write_txt import write_txt
+from statistics_local.get_stats_plots import get_stats_plots
 from go_model.evaluate_model import evaluate_model
 from train_data.tune_dataset import tune_pat_dataset
 from train_data.tune_dataset import tune_img_dataset

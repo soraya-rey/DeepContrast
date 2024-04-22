@@ -1,5 +1,5 @@
 
-vimport glob
+import glob
 import shutil
 import os
 import pandas as pd
@@ -13,12 +13,16 @@ from time import gmtime, strftime
 from datetime import datetime
 import timeit
 from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils import to_categorical
-from utils.resize_3d import resize_3d
-from utils.crop_image import crop_image
-from utils.respacing import respacing
-from utils.nrrd_reg import nrrd_reg_rigid_ref
-from get_data.get_img_dataset import img_dataset
+from keras.utils import to_categorical
+import sys 
+sys.path.append("/home/utilisateur/Bureau/radiomic_biomarker/Pipeline_Preprocessing_radiomic_data/DeepContrast")
+#print(sys.path)
+# local lib
+from src.utils.resize_3d import resize_3d
+from src.utils.crop_image import crop_image
+from src.utils.respacing import respacing
+from src.utils.nrrd_reg import nrrd_reg_rigid_ref
+from src.train_data.get_img_dataset import img_dataset
 
 
 
@@ -47,16 +51,17 @@ def data_prepro(body_part, data_dir, new_spacing=[1, 1, 3],
     """
     
 
-    if body_part == 'HeadNeck':
+    if body_part == 'HeadNeck':        
         crop_shape = [192, 192, 100]
         slice_range = range(17, 83)
-        data_dir = os.path.join(data_dir, 'HeadNeck')
-    elif body_part == 'Chest':
+        #data_dir = os.path.join(data_dir, 'HeadNeck')
+    elif body_part == 'Chest':        
         crop_shape = [192, 192, 140]
         slice_range = range(50, 120)
-        data_dir = os.path.join(data_dir, 'Chest')
+        #data_dir = os.path.join(data_dir, 'Chest')
     
     # choose first scan as registration template
+    
     reg_template = sorted(glob.glob(data_dir + '/*nrrd'))[0]
 
     # registration, respacing, cropping   

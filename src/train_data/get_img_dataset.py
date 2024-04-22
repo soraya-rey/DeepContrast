@@ -10,11 +10,13 @@ import numpy as np
 from time import gmtime, strftime
 from datetime import datetime
 import timeit
-from utils.respacing import respacing
-from utils.nrrd_reg import nrrd_reg_rigid_ref
-from utils.crop_image import crop_image
-from utils.resize_3d import resize_3d
-from utils.crop_image import crop_image
+import sys 
+sys.path.append("/home/utilisateur/Bureau/radiomic_biomarker/DeepContrast")
+from src.utils.respacing import respacing
+from src.utils.nrrd_reg import nrrd_reg_rigid_ref
+from src.utils.crop_image import crop_image
+from src.utils.resize_3d import resize_3d
+from src.utils.crop_image import crop_image
 import SimpleITK as sitk
 
 def img_dataset(pro_data_dir, run_type, nrrds, IDs, labels, fn_arr_1ch, fn_arr_3ch, fn_df,

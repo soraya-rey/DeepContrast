@@ -15,8 +15,8 @@ from datetime import datetime
 from time import gmtime, strftime
 import pickle
 import tensorflow
-from tensorflow.keras.models import Model
-from tensorflow.keras.models import load_model
+from keras.models import Model
+from keras.models import load_model
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
 

@@ -7,11 +7,11 @@ from collections import Counter
 from datetime import datetime
 from time import localtime, strftime
 import tensorflow as tf
-from tensorflow.keras.models import Model
+from keras.models import Model
 from go_model.callbacks import callbacks
 from utils.plot_train_curve import plot_train_curve
-from tensorflow.keras.optimizers import Adam
-from statistics.write_txt import write_txt
+from keras.optimizers import Adam
+from statistics_local.write_txt import write_txt
 
 
 

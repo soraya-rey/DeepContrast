@@ -4,13 +4,13 @@ import numpy as np
 import pandas as pd
 import glob
 import tensorflow
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import GlobalAveragePooling2D, Dense, Dropout, BatchNormalization
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.losses import BinaryCrossentropy
-from tensorflow.keras.metrics import BinaryAccuracy
-from tensorflow.keras.applications import ( 
+from keras.models import Model
+from keras.layers import GlobalAveragePooling2D, Dense, Dropout, BatchNormalization
+from keras.models import Sequential
+from keras.optimizers import Adam
+from keras.losses import BinaryCrossentropy
+from keras.metrics import BinaryAccuracy
+from keras.applications import ( 
     EfficientNetB3,
     EfficientNetB4,
     EfficientNetB5

@@ -5,11 +5,11 @@ import pickle
 from time import gmtime, strftime
 from datetime import datetime
 import timeit
-from statistics.cm_all import cm_all
-from statistics.roc_all import roc_all
-from statistics.prc_all import prc_all
+from statistics_local.cm_all import cm_all
+from statistics_local.roc_all import roc_all
+from statistics_local.prc_all import prc_all
 #from utils.acc_loss import acc_loss
-from statistics.write_txt import write_txt
+from statistics_local.write_txt import write_txt
 
 
 
